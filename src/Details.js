@@ -10,7 +10,7 @@ function Details() {
   useEffect(() => {
     (async () => {
       
-      await axios.get( `http://www.omdbapi.com/?i=${id}&apikey=78ba20c2`).then((val) => {
+      await axios.get( `http://www.omdbapi.com/?i=${id}&plot=full&apikey=78ba20c2`).then((val) => {
         console.log(val);
         setDetails(val.data)
         console.log(details);
@@ -35,12 +35,13 @@ function Details() {
                 <p><b>Director:</b> {details.Director}</p>
                 <p><b>Runtime:</b> {details.Runtime}</p>
                 <p><b>Release Date:</b> {details.Released}</p>
+                <p><b>Rated:</b> {details.Rated}</p>
                 <p class="mb-0"><b>Genre:</b>  {details.Genre}</p>
             </div>
 
         </div>
     <div class="col-md-7">
-        <img src={details.Poster} alt="movie-poster" class="rounded" style={{height:'600px',width:'600px'}}/>
+        <img src={details.Poster} alt="movie-poster" class="rounded" style={{height:'625px',width:'625px'}}/>
     </div>
 
     </div>

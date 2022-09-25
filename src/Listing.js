@@ -11,14 +11,13 @@ function Listing() {
     useEffect(() => {
       (async () => {
         
-        await axios.get( `http://www.omdbapi.com/?s=movie&apikey=78ba20c2`).then((val) => {
+        await axios.get( `http://www.omdbapi.com/?s=movie&page=${Math.floor(Math.random() * (99 - 1 + 1) + 1)}&type=movie&apikey=78ba20c2`).then((val) => {
           setList(val.data.Search)
-          console.log(list);
           
         }) 
       } )();
         
-    }, [list])
+    }, [])
     
 
 
@@ -26,13 +25,15 @@ function Listing() {
 
     const handleChange=(e) => {
       setSearchitem(e.target.value)
+
     }
 
     const handleSubmit=(e) => {
       e.preventDefault();
-      axios.get( `http://www.omdbapi.com/?t=${searchitem}&apikey=78ba20c2`).then((val) => {
+      axios.get( `http://www.omdbapi.com/?s=${searchitem}&apikey=78ba20c2`).then((val) => {
         
-        setSearchResult(val.data)
+        setSearchResult(val.data.Search)
+        console.log(SearchResult);
     }) 
 
     }
@@ -98,9 +99,13 @@ function Listing() {
        </div>
 
           
-        <div>
+        <div style={{float:"left"}} className="row">
         {
-        SearchResult && <Card style={{ width: '21rem',marginLeft: '40%' }}>
+        SearchResult && SearchResult.map((SearchResult) => {
+          return(
+
+        <Card style={{ width: '18rem' }} className="col-md-3 float-left" >
+          
         <Card.Img variant="top" src={SearchResult.Poster} />
         <Card.Body>
           <Card.Title>{SearchResult.Title}</Card.Title>
@@ -112,6 +117,8 @@ function Listing() {
           </Link>
         </Card.Body>
         </Card>
+          )
+        })
         }
         </div> 
       
