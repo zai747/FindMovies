@@ -11,7 +11,7 @@ function App() {
     <Navb/>
     
     <Routes>
-      <Route path='/details' element={<Details/>}></Route>
+      <Route path='/detail/:id' element={<Details/>}></Route>
       <Route path='/' element={<Listing/>}></Route>
 
     </Routes>
