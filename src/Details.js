@@ -24,6 +24,7 @@ function Details() {
 
 <div class="container mt-3">
     <div class="row">
+        <img src={details.Poster} alt="movie-poster" class="rounded col-md-7" style={{height:'625px',width:'625px'}}/>
         <div class="col-md-5">
             <div class="project-info-box mt-0">
                 <h5>{details.Title}</h5>
@@ -40,8 +41,7 @@ function Details() {
             </div>
 
         </div>
-    <div class="col-md-7">
-        <img src={details.Poster} alt="movie-poster" class="rounded" style={{height:'625px',width:'625px'}}/>
+    <div >
     </div>
 
     </div>

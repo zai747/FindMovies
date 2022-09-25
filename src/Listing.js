@@ -102,7 +102,6 @@ function Listing() {
         {
         SearchResult && SearchResult.map((SearchResult) => {
           return(
-
         <Card  className="col-md-3 float-left card" >
           
         <Card.Img variant="top" src={SearchResult.Poster} />
@@ -115,6 +114,7 @@ function Listing() {
           </Link>
         </Card.Body>
         </Card>
+
           )
         })
         }
