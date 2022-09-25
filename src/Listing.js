@@ -57,15 +57,14 @@ function Listing() {
       <div style={{float:"left"}} className="row">
       {list && list.map((item) =>{
         return(
-          <Card style={{ width: '18rem'}} className="col-md-3 float-left" >
+          <Card  className="col-md-3 float-left card" >
           <Card.Img variant="top" src={item.Poster} />
           <Card.Body>
+            <Link to={`/detail/${item.imdbID}`}>
             <Card.Title>{item.Title}</Card.Title>
             <Card.Text>
             {item.Plot}
             </Card.Text>
-            <Link to={`/detail/${item.imdbID}`}>
-            <Button variant="primary">Details</Button>
             </Link>
           </Card.Body>
           </Card>
@@ -104,16 +103,15 @@ function Listing() {
         SearchResult && SearchResult.map((SearchResult) => {
           return(
 
-        <Card style={{ width: '18rem' }} className="col-md-3 float-left" >
+        <Card  className="col-md-3 float-left card" >
           
         <Card.Img variant="top" src={SearchResult.Poster} />
         <Card.Body>
+          <Link to={`/detail/${SearchResult.imdbID}`}>
           <Card.Title>{SearchResult.Title}</Card.Title>
           <Card.Text>
           {SearchResult.Plot}
           </Card.Text>
-          <Link to={`/detail/${SearchResult.imdbID}`}>
-          <Button variant="primary">Details</Button>
           </Link>
         </Card.Body>
         </Card>
