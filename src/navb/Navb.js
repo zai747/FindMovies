@@ -6,7 +6,7 @@ function Navb() {
     <div>
         <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">Home</Navbar.Brand>
+          <Navbar.Brand href="/">FindMovies</Navbar.Brand>
         </Container>
       </Navbar>
     </div>
