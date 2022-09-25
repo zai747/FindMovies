@@ -38,4 +38,8 @@
       display: block;
       margin-bottom: 20px;
     }
+    .cardImage {
+        max-width: fit-content;
+        height: fit-content;
+    }
   }

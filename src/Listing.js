@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Form } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import './Listing.css'
 
 function Listing() {
     const [searchitem, setSearchitem] = useState("")
@@ -58,7 +59,7 @@ function Listing() {
       {list && list.map((item) =>{
         return(
           <Card  className="col-md-3 float-left card" >
-          <Card.Img variant="top" src={item.Poster} />
+          <Card.Img variant="top" className='cardImage' src={item.Poster} />
           <Card.Body>
             <Link to={`/detail/${item.imdbID}`}>
             <Card.Title>{item.Title}</Card.Title>
@@ -104,7 +105,7 @@ function Listing() {
           return(
         <Card  className="col-md-3 float-left card" >
           
-        <Card.Img variant="top" src={SearchResult.Poster} />
+        <Card.Img variant="top" className='cardImage' src={SearchResult.Poster} />
         <Card.Body>
           <Link to={`/detail/${SearchResult.imdbID}`}>
           <Card.Title>{SearchResult.Title}</Card.Title>

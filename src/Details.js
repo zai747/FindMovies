@@ -24,7 +24,7 @@ function Details() {
 
 <div class="container mt-3">
     <div class="row">
-        <img src={details.Poster} alt="movie-poster" class="rounded col-md-7" style={{height:'625px',width:'625px'}}/>
+        <img src={details.Poster} alt="movie-poster" class="rounded col-md-7 " style={{height:'625px',width:'625px'}}/>
         <div class="col-md-5">
             <div class="project-info-box mt-0">
                 <h5>{details.Title}</h5>
@@ -34,9 +34,11 @@ function Details() {
 
             <div class="project-info-box " >
                 <p><b>Director:</b> {details.Director}</p>
+                <p><b>Cast:</b> {details.Actors}</p>
                 <p><b>Runtime:</b> {details.Runtime}</p>
                 <p><b>Release Date:</b> {details.Released}</p>
                 <p><b>Rated:</b> {details.Rated}</p>
+                <p><b>Language:</b> {details.Language}</p>
                 <p class="mb-0"><b>Genre:</b>  {details.Genre}</p>
             </div>
 
