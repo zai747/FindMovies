@@ -41,5 +41,7 @@
     .cardImage {
         max-width: fit-content;
         height: fit-content;
+        margin-left: 2em;
+
     }
   }
